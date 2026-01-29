@@ -37,7 +37,7 @@ BosonicFlow adopts the following conceptual stack:
 ```text
 Algorithm / Circuit (discrete)
 ↓
-Logical Qubits (e.g. GKP encoding)
+Logical Qubits (GKP encoding)
 ↓
 Logical Error Models
 ↓
