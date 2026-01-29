@@ -32,3 +32,14 @@ BosonicFlow aims to clarify this abstraction boundary and help users reason corr
 ### Architectural Perspective
 
 BosonicFlow adopts the following conceptual stack:
+**Conceptual abstraction stack used in BosonicFlow:**
+
+```text
+Algorithm / Circuit (discrete)
+↓
+Logical Qubits (e.g. GKP encoding)
+↓
+Logical Error Models
+↓
+Photonic Physical Substrate
+```
