@@ -1,0 +1,74 @@
+
+# BosonicFlow is an educational, architecture-level project.
+# This .gitignore is intentionally conservative and documentation-first
+
+
+# =========================
+# Python / PennyLane
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Jupyter / Demos (future)
+# =========================
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# =========================
+# Logs & temporary files
+# =========================
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / Editor
+# =========================
+.idea/
+.vscode/
+*.iml
+
+# =========================
+# Documentation build artifacts
+# =========================
+docs/_build/
+site/
+html/
+
+# =========================
+# Results / figures (generated)
+# =========================
+figures/
+plots/
+output/
+results/
+
+# =========================
+# Secrets & local config
+# =========================
+.env
+.env.*
+config.local.yml
+config.local.yaml
