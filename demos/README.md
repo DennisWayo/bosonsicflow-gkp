@@ -76,8 +76,4 @@ Understanding this separation is crucial for making photonic quantum computing s
 
 ### Further reading
 
-If you’d like to explore these ideas in more depth, the following resources are good starting points:
-- Original GKP proposal: Gottesman, Kitaev, and Preskill (2001)
-- Reviews on bosonic quantum error correction
-- Architecture-level studies of fault-tolerant photonic quantum computing
-- Other PennyLane demos on noise modeling and error correction
+comming soon .....
