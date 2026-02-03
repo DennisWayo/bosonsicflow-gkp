@@ -1,8 +1,8 @@
-## BosonicFlow
+## BosonicFlow–GKP
 
-**BosonicFlow** is a conceptual, architecture-aware software abstraction designed to help users reason about **logical qubits and quantum error correction in photonic quantum computing**, using GKP encoding as a concrete example.
+This repository contains an educational PennyLane demo on GKP-based quantum error correction in photonic systems.
 
-This project is educational in nature and is intended to align with the abstraction philosophy of PennyLane.
+BosonicFlow provides the conceptual scaffolding used to organize the discussion, but the focus of the demo is on GKP qubits, photonic noise, and logical error correction.
 
 ### What BosonicFlow Is
 
