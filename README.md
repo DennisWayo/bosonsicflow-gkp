@@ -1,12 +1,6 @@
 ## BosonicFlow–GKP
 
-<<<<<<< HEAD
-This repository contains a **SERIES** of educational PennyLane demo on GKP-based quantum error correction in photonic systems. 
-BosonicFlow provides the conceptual scaffolding used to organize the discussion, but the focus of the demo is on GKP qubits, photonic noise, and logical error correction.
-=======
 This repository contains a **series** of educational PennyLane demos focused on GKP-based quantum error correction in photonic systems.
->>>>>>> 4a5e69e (Refine demo narrative and Case 1/2 analysis; add clearer logical-noise interpretation)
-
 BosonicFlow provides the conceptual scaffolding used to organize the discussion. The demos themselves focus on GKP-encoded logical qubits, photonic noise, and how quantum error correction appears at the software abstraction layer.
 
 
