@@ -1,0 +1,75 @@
+name: build-desktop-app
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install system deps (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y zip
+
+      - name: Install Python deps
+        run: |
+          python -m pip install -U pip
+          python -m pip install -r pyqt_gui/requirements.txt
+
+      - name: Build app (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          cd pyqt_gui
+          PYTHON_BIN="$(python -c 'import sys; print(sys.executable)')" ./build_macos.sh
+
+      - name: Build app (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          cd pyqt_gui
+          PYTHON_BIN="$(python -c 'import sys; print(sys.executable)')" ./build_linux.sh
+
+      - name: Build app (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          Set-Location pyqt_gui
+          $env:PYTHON_BIN = (Get-Command python).Source
+          .\build_windows.ps1
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: bosonicflow-gkp-${{ runner.os }}
+          path: pyqt_gui/downloads/*.zip
+
+  release:
+    if: github.event_name == 'release'
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Upload release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            artifacts/**/bosonicflow-gkp-*.zip
