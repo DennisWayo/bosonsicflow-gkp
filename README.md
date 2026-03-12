@@ -54,10 +54,10 @@ Note: the notebook uses direct numeric inputs (no sliders). For a live GUI, use 
 
 The desktop app mirrors S05 with live plots, data export, and multiple noise models.
 
-Downloads (latest release assets):
-- [macOS](https://github.com/DennisWayo/bosonicflow-gkp/releases/latest/download/bosonicflow-gkp-macos.zip)
-- [Windows](https://github.com/DennisWayo/bosonicflow-gkp/releases/latest/download/bosonicflow-gkp-windows.zip)
-- [Linux](https://github.com/DennisWayo/bosonicflow-gkp/releases/latest/download/bosonicflow-gkp-linux.zip)
+Build scripts (offline desktop):
+- [macOS build script](pyqt_gui/build_macos.sh)
+- [Windows build script (PowerShell)](pyqt_gui/build_windows.ps1)
+- [Linux build script](pyqt_gui/build_linux.sh)
 
 Build instructions: [pyqt_gui/README.md](pyqt_gui/README.md)
 
