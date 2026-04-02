@@ -27,8 +27,3 @@ fi
   --name "$APP_NAME" \
   --collect-submodules pennylane \
   main.py
-
-mkdir -p downloads
-rm -f "downloads/${APP_NAME}-macos.zip"
-cd downloads
-zip -r "${APP_NAME}-macos.zip" "../dist/${APP_NAME}.app"

@@ -64,6 +64,10 @@ plots/
 output/
 results/
 
+# Keep demo preview figures versioned in the repo
+!demos/figures/
+!demos/figures/*.png
+
 # =========================
 # Desktop app artifacts
 # =========================

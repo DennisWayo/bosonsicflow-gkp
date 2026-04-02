@@ -5,10 +5,10 @@ This folder contains a cross-platform desktop playground for the BosonicFlow-GKP
 ## Run locally
 
 1. Create and activate a virtual environment.
-2. Install dependencies with `pip install -r requirements.txt`.
+2. Install dependencies with `pip install -r ../requirements.txt`.
 3. Run the app with `python main.py`.
 
-## Build a ZIP per OS
+## Optional Packaging Per OS
 
 These builds must be created on the target OS.
 
@@ -16,7 +16,7 @@ These builds must be created on the target OS.
 2. Run the PyInstaller command.
 Mac or Linux: `pyinstaller --noconfirm --clean --windowed --name bosonicflow-gkp --icon assets/icon.svg --add-data "assets/icon.svg:assets" main.py`.
 Windows (PowerShell): `pyinstaller --noconfirm --clean --windowed --name bosonicflow-gkp --icon assets/icon.svg --add-data "assets/icon.svg;assets" main.py`.
-3. Zip the output folder in `dist/bosonicflow-gkp/`.
+3. The packaged app is created in `dist/`.
 
 Notes:
 - The app embeds its own Python and dependencies when built with PyInstaller.

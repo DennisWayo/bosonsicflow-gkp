@@ -20,8 +20,3 @@ if ($LASTEXITCODE -ne 0) {
   --name $AppName `
   --collect-submodules pennylane `
   main.py
-
-New-Item -ItemType Directory -Force -Path downloads | Out-Null
-$zipPath = Join-Path downloads "$AppName-windows.zip"
-if (Test-Path $zipPath) { Remove-Item $zipPath }
-Compress-Archive -Path (Join-Path dist $AppName) -DestinationPath $zipPath
